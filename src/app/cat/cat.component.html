@@ -1,0 +1,12 @@
+<StackLayout [nsRouterLink]="'/cat-detail/' + cat.id ">
+    <Label class="h2" [text]="cat.name" textAlignment="center"></Label>
+    <GridLayout columns="100, *" class="m-5">
+        <Image col="0" class="img-rounded" src="{{ cat.image }}"></Image>
+        <StackLayout col="1">
+            <ns-stats [stat]="cat.stat"></ns-stats>
+        </StackLayout>
+    </GridLayout>
+    <StackLayout row="1" class="hr-light"></StackLayout>
+</StackLayout>
+
+

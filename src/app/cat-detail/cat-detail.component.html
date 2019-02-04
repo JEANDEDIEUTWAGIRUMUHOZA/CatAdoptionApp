@@ -1,0 +1,20 @@
+<ScrollView>
+    <StackLayout>
+        <Image [src]="cat.image"></Image>
+        <Label text="{{ cat.name }}" class="h1" textAlignment="center"></Label>
+        <ns-stats [stat]="cat.stat"></ns-stats>
+        <Label text="Portrait" class="h2 m-5" textAlignment="center"></Label>
+        <Label textWrap="true" [text]="cat.description" editable="false"></Label>
+        <GridLayout columns="*, *" rows="auto, auto" class="m-15">
+            <Label textAlignment="center" col="0" row="0" text="Sex : {{ cat.sex }}"></Label>
+            <Label textAlignment="center" col="1" row="0" text="Birthday : {{ cat.birthday | date:'shortDate' }}"></Label>
+            <Label textAlignment="center" col="0" row="1" text="Race : {{ cat.race.name }}"></Label>
+            <Label textAlignment="center" *ngIf="cat.fiv" col="1" row="1" text="Fiv ? Oui..."></Label>
+            <Label textAlignment="center" *ngIf="!cat.fiv"col="1" row="1" text="Fiv ? Non !"></Label>
+        </GridLayout>
+        <Button text="Contactez-nous !"
+                (tap)="showDialog()"
+                class="btn btn-primary m-15"></Button>
+    </StackLayout>
+</ScrollView>
+

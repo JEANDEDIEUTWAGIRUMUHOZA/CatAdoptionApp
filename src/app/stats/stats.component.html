@@ -1,0 +1,21 @@
+<StackLayout>
+    <GridLayout columns="*, *" rows="40, 40">
+        <StackLayout col="0" row="0"  borderWidth="1" borderColor="whitesmoke" class="m-2">
+            <Label text="Human" textAlignment="center"></Label>
+            <ns-stat [level]="stat.humanSociability"></ns-stat>
+        </StackLayout>
+        <StackLayout col="1" row="0" borderWidth="1"  borderColor="whitesmoke" class="m-2">
+            <Label text="Animals" textAlignment="center"></Label>
+            <ns-stat [level]="stat.animalSociability"></ns-stat>
+        </StackLayout>
+        <StackLayout col="0" row="1" borderWidth="1"  borderColor="whitesmoke" class="m-2">
+            <Label text="Cleanliness" textAlignment="center"></Label>
+            <ns-stat [level]="stat.cleanliness"></ns-stat>
+        </StackLayout>
+        <StackLayout col="1" row="1" borderWidth="1" borderColor="whitesmoke" class="m-2">
+            <Label text="Energy" textAlignment="center"></Label>
+            <ns-stat [level]="stat.energy"></ns-stat>
+        </StackLayout>
+    </GridLayout>
+</StackLayout>
+
